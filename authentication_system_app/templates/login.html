@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+
+<h1>Login Account</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="username" name="username">Username</label>
+        <input type="text" name="username" id="username">
+    </div>
+
+    <div>
+        <label for="password" name="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+<p>Forgot your password? <a href="{% url 'reset_password' %}">Reset password</a></p>
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+{% endblock %}

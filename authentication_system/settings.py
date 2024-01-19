@@ -55,7 +55,7 @@ ROOT_URLCONF = 'authentication_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['authentication_system_app/templates'],
+        'DIRS': ['authentication_system_app/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

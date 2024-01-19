@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+<div>
+    <p>{{ error|escape }}</p>
+</div>
+{% endfor %}
+{% endfor %}
+
+{% for error in form.non_field_errors %}
+<div>
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+
+<h1>Register Account</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div>
+        {{ field.label }}
+        {{ field }}
+    </div>
+    {% endfor %}
+    <button type="submit">Register</button>
+</form>
+
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+{% endblock %}
