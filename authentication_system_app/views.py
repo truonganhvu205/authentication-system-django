@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import PasswordResetForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -21,7 +22,7 @@ def login_account(request):
                 login(request, user)
                 return redirect('home')
             else:
-                messages.info(request, 'Username or Password is incorrect.')
+                messages.info(request, 'The username or password is incorrect. Please try again!..')
         return render(request, 'login.html')
 
 def logout_account(request):
@@ -40,6 +41,3 @@ def register_account(request):
                 messages.success(request, 'Your account was created successfully.')
                 return redirect('login')
         return render(request, 'register.html', {'form': form})
-
-def reset_account_password(request):
-    pass

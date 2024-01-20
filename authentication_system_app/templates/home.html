@@ -2,9 +2,7 @@
 {% load static %}
 
 {% block content %}
-{% if request.user.is_authenticated %}
-<h1>Hi, {{ request.user }} <a href="{% url 'logout' %}">Logout</a></h1>
-{% else %}
-<h1>Hi, {{ request.user }} <a href="{% url 'login' %}">Login</a></h1>
-{% endif %}
+<section class="home">
+    <h1>Hi, {{ request.user }} <a href="{% url 'logout' %}">Logout</a></h1>
+</section>
 {% endblock %}

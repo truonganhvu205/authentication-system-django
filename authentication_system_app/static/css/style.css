@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home h1 {
+    font-size: 4rem;
+}
+
+.home a {
+    color: #fff;
+    margin-top: 1rem;
+    font-size: x-large;
+    text-underline-offset: 2px;
+}
+
+.home a:hover, 
+.login button:hover, 
+.login .extend_links a:hover, 
+.register button:hover,
+.password_reset button:hover,
+.password_reset a:hover,
+.password_reset_form button {
+    cursor: pointer;
+}
+
+.login, 
+.register,
+.password_reset, 
+.password_reset_sent,
+.password_reset_form,
+.password_reset_complete {
+    background-color: #fff;
+    color: #333;
+    border-radius: 1rem;
+    min-width: 30rem;
+    min-height: 24rem;
+}
+
+.password_reset {
+    min-height: 18rem;
+}
+
+.password_reset_sent {
+    min-height: 10rem;
+}
+
+.password_reset_form {
+    min-height: 20rem;
+}
+
+.password_reset_complete {
+    min-height: 10rem;
+}
+
+.login form, 
+.login .extend_links, 
+.register form, 
+.register .login_link,
+.password_reset form,
+.password_reset p,
+.password_reset_sent p,
+.password_reset_form form,
+.password_reset_form p,
+.password_reset_complete p {
+    margin: 0 2rem;
+}
+
+.password_reset_form form {
+    padding-bottom: 1rem;
+}
+
+.login h1, 
+.register h1,
+.password_reset h1,
+.password_reset_sent h1,
+.password_reset_form h1,
+.password_reset_complete h1 {
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.login .username, 
+.login .password, 
+.register div,
+.password_reset div,
+.password_reset_form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+}
+
+.login .username label, 
+.login .password label, 
+.register div label,
+.password_reset label,
+.password_reset_form label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.login .username input, 
+.login .password input, 
+.register div input,
+.password_reset input,
+.password_reset_form input {
+    padding: 8px;
+    font-size: medium;
+}
+
+.login p {
+    margin-bottom: 1rem;
+    margin-top: -0.75rem;
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+
+.register p, 
+.register strong {
+    font-size: small;
+    color: red;
+}
+
+.login button, 
+.register button,
+.password_reset button,
+.password_reset_form button {
+    display: block;
+    margin: auto;
+    padding: 8px;
+    font-size: large;
+    min-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.login .extend_links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .extend_links a, 
+.register a,
+.password_reset a {
+    color: #333;
+    text-underline-offset: 2px;
+    opacity: 0.6;
+}
+
+.login .extend_links a:hover, 
+.register a:hover,
+.password_reset a:hover {
+    opacity: 0.9;
+}
+
+.register .login_link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.register .login_link a {
+    margin-bottom: 2rem;
+}
+
+.password_reset button {
+    margin-top: 0.75rem;
+    padding: 8px;
+}
+
+.password_reset p:nth-last-child(1) {
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.password_reset p:nth-last-child(1) a {
+    padding-left: 8px;
+}
+
+.password_reset p:nth-child(2) {
+    margin-bottom: 0.75rem;
+}
+
+
+.password_reset_sent p {
+    padding-bottom: 2rem;
+}
+
+.password_reset_form p {
+    padding-bottom: 1rem;
+}
+
+.password_reset_complete p {
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .login, 
+    .register,
+    .password_reset_sent,
+    .password_reset_form,
+    .password_reset_complete {
+        min-width: 22rem;
+        min-height: 24rem;
+    }
+
+    .password_reset {
+        min-width: 100%;
+        min-height: 22rem;
+    }
+
+    .password_reset_form {
+        min-height: 28rem
+    }
+
+    .password_reset_complete {
+        min-height: 16rem;
+    }
+
+    .login form, 
+    .login .extend_links, 
+    .register form, 
+    .register .login_link {
+        margin: 0 2rem;
+    }
+}

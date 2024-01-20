@@ -1,3 +1,8 @@
+# IMPORTANT
+1/ [How I fixed fix for SMTP username and password not accepted error](https://youtu.be/Y_u5KIeXiVI?si=uWvDZrbO-1tqWSl-)
+
+2/ [Sign in with app passwords](https://support.google.com/accounts/answer/185833?hl=en)
+
 # Clone project
 ```bash
 git init
@@ -37,9 +42,9 @@ exit
 # Preview project
 <table align='center'>
   <tr align='center'>
-    <td>Login/ Logout</td>
-    <td>Registration</td>
-    <td>Reset Password</td>
+    <td>Login</td>
+    <td>Register account</td>
+    <td>Reset password</td>
   </tr>
   <tr align='center'>
     <td>
