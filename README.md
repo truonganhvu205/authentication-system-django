@@ -23,6 +23,7 @@ pipenv shell
 ```bash
 # Django
 pipenv install django
+pip3 install python-dotenv
 ```
 
 # Run server
